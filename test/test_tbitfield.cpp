@@ -23,8 +23,9 @@ TEST(TBitField, new_bitfield_is_set_to_zero)
   {
     sum += bf.GetBit(i);
   }
-
+  
   EXPECT_EQ(0, sum);
+  
 }
 
 TEST(TBitField, can_set_bit)
@@ -106,7 +107,6 @@ TEST(TBitField, can_assign_bitfields_of_equal_size)
     bf1.SetBit(i);
   }
   bf2 = bf1;
-
   EXPECT_NE(0, bf2.GetBit(0));
   EXPECT_NE(0, bf2.GetBit(1));
 }
